@@ -451,7 +451,7 @@ section.footer {
   z-index: 1000;
   background: #fff;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-  padding: 2rem 9%;
+  padding: 2rem 3%;
 }
 
 .navigation .Logo{
@@ -570,6 +570,7 @@ section.footer {
   }
   .navigation-menu li a:hover{
     color: #EB89B5;
+    cursor: pointer;
   }
   .navigation-menu li:hover {
     background-color: #eee;
