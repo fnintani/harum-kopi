@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { FaMugHot } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -26,25 +27,66 @@ const Navbar = () => {
       >
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link
+              to="home"
+              smooth={true}
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Utama
+            </Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link
+              to="about"
+              smooth={true}
+              offset={-50}
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Tentang Kami
+            </Link>
           </li>
           <li>
-            <a href="#">Menu</a>
+            <Link
+              to="menu"
+              smooth={true}
+              offset={-50}
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Menu
+            </Link>
           </li>
           <li>
-            <a href="#">Review</a>
+            <Link
+              to="review"
+              smooth={true}
+              offset={-50}
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Ulasan
+            </Link>
           </li>
           <li>
-            <a href="#">Book</a>
+            <Link
+              to="book"
+              smooth={true}
+              offset={-50}
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Reservasi
+            </Link>
           </li>
         </ul>
       </div>
-      <a href="#" className="btn">
-        Book a table
-      </a>
     </nav>
   );
 };

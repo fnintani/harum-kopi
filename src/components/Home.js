@@ -14,26 +14,31 @@ const Home = () => {
   ];
   const [sliderData, setSliderData] = useState(imgs[0]);
   const handleClick = (index) => {
-    // console.log(index);
     const slider = imgs[index];
     setSliderData(slider);
   };
 
   return (
-    <div className="aka">
+    <div name="home">
       <section className="home" id="home">
         <div className="row">
           <div className="content">
-            <h3>fresh coffee in the morning</h3>
-            <a href="#" className="btn">
+            <h3>Kopi sempurna untuk semua</h3>
+            <a href="/" className="btn">
               {" "}
-              Buy one now
+              Beli sekarang
             </a>
           </div>
           <div className="image">
-            <img src={sliderData.value} alt="" className="main-home-image" />
+            <img
+              src={sliderData.value}
+              alt="coffee"
+              className="main-home-image"
+            />
           </div>
         </div>
+
+        <div className="pick">click your favorite coffee</div>
 
         <div className="image-slider">
           {imgs.map((data, i) => (

@@ -31,10 +31,17 @@ section{
   padding: 2rem 9%;
 }
 
+section.footer {
+  padding: 2rem 2rem 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+
 .home{
   min-height: 100vh;
   padding-top: 12rem;
-  background: url("./assets/image/home-bg.jpg") no-repeat;
+  background: url("./assets/image/greeen-watercolor.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -53,6 +60,16 @@ section{
 .home .row .image{
   flex: 1 1 42rem;
   padding-top: 10rem;
+  text-align: center;
+}
+
+.home .pick {
+  height: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3rem;
+  width: 80vw;
+  text-transform: lowercase;
   text-align: center;
 }
 
@@ -78,7 +95,7 @@ section{
 
 .home .image-slider{
   text-align: center;
-  padding: 3rem 0;
+  padding: 1rem 0 2rem 0;
 }
 
 .home .image-slider img{
@@ -180,7 +197,7 @@ section{
 }
 
 .menu{
-  background: url('./assets/image/menu-bg.jpg') no-repeat;
+  background: url('./assets/image/greeen-watercolor.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -284,7 +301,8 @@ section{
   justify-content: center;
   align-items: center;
   font-size: 1.7rem;
-  
+  padding-bottom: 2rem;
+
 }
 
 .swipe h3{
@@ -294,7 +312,7 @@ section{
 
 
 .book{
-  background: url(./assets/image/book-bg.jpg) no-repeat;
+  background: url(./assets/image/greeen-watercolor.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -328,10 +346,15 @@ section{
   resize: none;
 }
 
+.footer .box {
+  place-content: center;
+}
+
 .footer .box-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit,minmax(15rem,19rem));
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 .footer .box-container .box h3{
@@ -354,7 +377,7 @@ section{
 .footer .credit{
   text-align: center;
   font-size: 2rem;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 0 1rem;
   margin-top: 1rem;
   color: var(--main-color);
 }
@@ -369,6 +392,9 @@ section{
   }
   section{
     padding: 2rem;
+  }
+  section.footer{
+    padding: 2rem 2rem 0 2rem;
   }
 }
 
@@ -560,9 +586,11 @@ section{
   }
 }
 
-@media screen and (max-width: 378px) {
+@media screen and (max-width: 580px) {
   .navigation-menu.expanded ul {
     display: block;
+    position: absolute;
+    top:7rem;
   }
   .navigation .btn{
     margin-top: 0;
@@ -570,5 +598,20 @@ section{
   }
   
 }
+
+/* @media screen and (max-width: 378px) {
+  .navigation-menu.expanded ul {
+    display: block;
+    position: absolute;
+    top:10rem;
+  }
+  .navigation .btn{
+    margin-top: 0;
+    margin-left: 5rem;
+  }
+  
+} */
+
+
 
 /* -------------------------------------NAVBAR CSS END----------------------------- */

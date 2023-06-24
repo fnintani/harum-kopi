@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { ImStarFull } from "react-icons/im";
 import { ImStarHalf } from "react-icons/im";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
@@ -9,13 +8,11 @@ import "swiper/css/pagination";
 import "swiper/css";
 
 const Review = () => {
-  const [datas, setDatas] = useState(reviews);
-
   return (
-    <div className="aka">
+    <div name="review">
       <section className="review" id="review">
         <h1 className="heading">
-          review <span>what people says</span>
+          Ulasan <span>what people says</span>
         </h1>
 
         <Swiper
@@ -59,15 +56,15 @@ const Review = () => {
             },
           }}
         >
-          {datas.map((value) => {
+          {reviews.map((value) => {
             const { idk, title, desc, name, image } = value;
 
             return (
-              <>
+              <div key={idk}>
                 <SwiperSlide>
                   <div className="review-slider">
-                    <div className="box" key={idk}>
-                      <img src={image} alt="" />
+                    <div className="box">
+                      <img src={image} alt="customer" />
                       <div className="stars">
                         <ImStarFull />
                         <ImStarFull />
@@ -81,7 +78,7 @@ const Review = () => {
                     </div>
                   </div>
                 </SwiperSlide>
-              </>
+              </div>
             );
           })}
         </Swiper>

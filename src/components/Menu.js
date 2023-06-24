@@ -1,39 +1,33 @@
-import React from 'react'
-import { useState } from 'react'
-import menus from "./menus.js"
-
+import React from "react";
+import menus from "./menus.js";
 
 const Menu = () => {
-  const [data, setData] = useState(menus);
-
   return (
-    <div className='aka' >
-        <section className="menu" id="menu">
-            <h1 className="heading">our menu <span>popular menu</span></h1>
+    <div name="menu">
+      <section className="menu" id="menu">
+        <h1 className="heading">
+          Menu Kami<span>popular menu</span>
+        </h1>
 
-            <div className="box-container">
+        <div className="box-container">
+          {menus.map((value) => {
+            const { id, titles, descs, prices, images } = value;
 
-
-            {data.map((value) =>{
-                const {id, titles, descs, prices, images} = value;
-
-                return (
-                  <>
-                    <a href="#" className='box' key={id}>
-                      <img src={images} alt="" />
-                      <div className="content">
-                        <h3>{titles} </h3>
-                        <p>{descs} </p>
-                        <span>${prices} </span>
-                      </div>
-                    </a>
-                  </>
-                )
-            })}
-            </div>
-        </section>
+            return (
+              <div className="box" key={id}>
+                <img src={images} alt="" />
+                <div className="content">
+                  <h3>{titles} </h3>
+                  <p>{descs} </p>
+                  <span>Rp{prices}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

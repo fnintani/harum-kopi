@@ -5,28 +5,28 @@ import img4 from "../assets/image/pic-4.png";
 
 const reviews = [
   {
-    idk: 1,
+    idk: "1slskdsun",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ducimus ",
     name: "Abraham Adam",
     title: "satisfied client",
     image: img1,
   },
   {
-    idk: 2,
+    idk: "2sdsdkdjis",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ducimus ",
-    name: "Ruth mayesha",
+    name: "Maya Sheri",
     title: "satisfied client",
     image: img2,
   },
   {
-    idk: 3,
+    idk: "3sdfs",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ducimus ",
-    name: "Endarson lit",
+    name: "John Smith",
     title: "satisfied client",
     image: img3,
   },
   {
-    idk: 4,
+    idk: "4rerwfgfgg",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ducimus ",
     name: "Enzy Rio",
     title: "satisfied client",
